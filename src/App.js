@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Intro from './Components/Intro/Intro'
+import Particles from 'react-particles-js'
+import About from './Components/About/About';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div >
+        <Particles
+        style={{
+        position:'fixed',
+        top:0,
+        left:0,
+        zIndex:-1
+        }}
+        params={{
+            "particles": {
+                color: {
+                    value: "#95a5a6"
+                },
+                "number": {
+                    "value": 50
+                },
+                line_linked: {
+                    color: {
+                    value: "#95a5a6"
+                    }
+                },
+                "size": {
+                    "value": 5
+                }
+            }
+        }} />
+        <Intro /> 
+        <About />
+        </div>
+    )
 }
 
-export default App;
+export default App
